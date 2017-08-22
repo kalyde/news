@@ -18,7 +18,7 @@ def get_popular_titles():
               "group by articles.title "
               "order by views desc limit 3")
     results = c.fetchall()
-    text_file = open("text.txt", "a+") # append to text file
+    text_file = open("text.txt", "a+")  # append to text file
     text_file.write("The three most popular articles of all time are:\n\n")
     # for loop to print each article
     for title, views in results:
@@ -40,7 +40,7 @@ def get_popular_authors():
               "and log.status = '200 OK' "
               "group by authors.name order by num desc")
     results = c.fetchall()
-    text_file = open("text.txt", "a+") # append to text file
+    text_file = open("text.txt", "a+")  # append to text file
     text_file.write("The most popular authors of all time are:\n\n")
     # for loop to print each author
     for name, num in results:
@@ -90,7 +90,7 @@ def get_error_days():
               "where bad_request.time = total_request.time "
               "and (bad_request.num * 1.0 / total_request.num) > 0.01")
     results = c.fetchall()
-    text_file = open("text.txt", "a+") # append to text file
+    text_file = open("text.txt", "a+")  # append to text file
     text_file.write("Day(s) where more than 1 percent of requests were errors:"
                     "\n\n")
     for time, errors in results:
