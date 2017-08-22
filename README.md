@@ -7,7 +7,7 @@ To load the data, download newsdata.zip file use the command `psql -d news -f ne
 ## Usage
 Run the python `news.py` file and it will export a **text.txt** file with the results.
 
-## Views
+## View Definitions
 Two views were created to find the percentage of requested errors on each day.
 
 ##### bad_request view
